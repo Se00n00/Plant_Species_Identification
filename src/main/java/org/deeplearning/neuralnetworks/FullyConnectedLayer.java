@@ -25,7 +25,8 @@ public class FullyConnectedLayer {
 
     // Forward pass for the fully connected layer
     public INDArray forward(INDArray input) {
-        this.inputs = input;
+
+//        this.inputs = input;
         INDArray weightedSum = weights.mmul(input).addColumnVector(biases);
         this.outputs = activationFunction.activate(weightedSum);
         return outputs;
